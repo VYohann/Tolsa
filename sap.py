@@ -10,7 +10,6 @@ def copier_dans_pressepapier():
     contenu = zone_texte.get("1.0", "end-1c")  # Récupérer le contenu de la zone de texte
     pyperclip.copy(contenu)  # Copier le contenu dans le presse-papiers
 
-
 def change_font_size(size):
     #zone_texte.configure(font=("Courier New", size))
     #zone_texte.configure(font=("Monaco", size))
@@ -20,7 +19,6 @@ def get_file_path(filename):
     if hasattr(sys, "_MEIPASS"):
         return os.path.join(sys._MEIPASS, filename)
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
-
 
 def sauvegarder_contenu(contenu, nom_fichier):
     dossier_sauvegarde = get_file_path("SAP_import")
@@ -59,7 +57,6 @@ def afficher_contenu_fichier(nom_fichier):
 def afficher(text):
     zone_texte.delete("1.0", "end")
     zone_texte.insert("1.0", text)
-
 
 def convert_to_data_array(nom_fichier):
     dossier_sap_import = get_file_path("SAP_import")
