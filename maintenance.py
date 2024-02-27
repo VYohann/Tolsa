@@ -1,6 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox, simpledialog
 import webbrowser
+import os
+import sys
+import pyperclip
+from unidecode import unidecode
+import keyboard
 
 def ouvrir_page():
     url = entry.get()
